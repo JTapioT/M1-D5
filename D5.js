@@ -74,11 +74,12 @@ Write a function "boundary" which accept an integer n and returns true if n is w
 */
 
 let boundary = function(n) {
-  if((n >= 20 || n <= 100) || n === 400) {
+  if (n >= 20 || n <= 100 || n === 400) {
     return true;
   } else {
     return false;
   }
+  // return (n >= 20 || n <= 100) || n === 400)
 }
 // console.log("EXERCISE 4:");
 // console.log(boundary(39));
@@ -141,6 +142,13 @@ let reverseString = function(string) {
   }
   let result = reversedString.join("");
   return result;
+  
+  // Other solution:
+  // let reversedString = "";
+  // for (let i= string.length; i > 0; i--) {
+  // reversedString += string[i];
+  // }
+  }
   // return reversedString.join("");
 }
 // console.log("EXERCISE 7:");
@@ -153,20 +161,24 @@ Write a function "upperFirst" to capitalize the first letter of each word of a g
 */
 
 let upperFirst = function(string) {
-  let result = [];
+  let wordArr = [];
+
     for(let i=0; i<string.length; i++) {
       if(i === 0 || string[i-1] === " ") {
-        result.push(string[i].toUpperCase());
+        wordArr.push(string[i].toUpperCase());
       } else {
-        result.push(string[i]);
+        wordArr.push(string[i]);
       }
     }
-  let upperFirstString = result.join("");
-  return upperFirstString;
+
+  let word = wordArr.join("");
+
+  return word;
   //return result.join("");
 }
-// console.log("EXERCISE 9:");
-// console.log(upperFirst("upperFirst function was created"));
+
+console.log("EXERCISE 9:");
+console.log(upperFirst("upperFirst function was created"));
 
 
 
