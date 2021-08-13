@@ -76,6 +76,8 @@ Write a function "boundary" which accept an integer n and returns true if n is w
 let boundary = function(n) {
   if((n >= 20 || n <= 100) || n === 400) {
     return true;
+  } else {
+    return false;
   }
 }
 // console.log("EXERCISE 4:");
