@@ -21,8 +21,6 @@ let area = function(l1, l2) {
 // console.log("EXERCISE 1:");
 // console.log(area(2,2));
 
-
-
 /* EXERCISE 2
 Write a function "crazySum" which receives two integers. It should return the sum of those two values, but if the two values are the same then it should return their sum multiplied by 3.
 */
@@ -66,8 +64,8 @@ let crazyDiff = function(number) {
 
   return difference;
 }
-//console.log("EXERCISE 3:");
-//console.log(crazyDiff(-200));
+// console.log("EXERCISE 3:");
+// console.log(crazyDiff(-200));
 
 
 
@@ -111,16 +109,19 @@ HINT: Module Operator
 */
 
 let check3and7 = function(number) {
-  if(number > 0) {
-    if(number % 3 === 0) {
-      return "Number is multiple of 3";
-    } else if(number % 7 === 0) {
-      return "Number is multiple of 7";
-    } else {
-      return "Number is not multiple of 3 or 7.";
-    }
-  }
+  // if(number > 0) {
+  //   if(number % 3 === 0 || number % 7 === 0) {
+  //     return true;
+  //   } else {
+  //     return false;
+  //   }
+  // }
 
+  if(number > 0 && (number % 3 === 0 || number % 7 === 0)) {
+    return true;
+  } else {
+    return false;
+  }
 }
 // console.log("EXERCISE 6: ");
 // console.log(check3and7(18));
