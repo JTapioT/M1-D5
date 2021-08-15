@@ -149,8 +149,8 @@ let reverseString = function(string) {
   // reversedString += string[i];
   // }
   }
-  // return reversedString.join("");
-}
+
+// return reversedString.join("");
 // console.log("EXERCISE 7:");
 // console.log(reverseString("Strive"));
 
@@ -161,24 +161,16 @@ Write a function "upperFirst" to capitalize the first letter of each word of a g
 */
 
 let upperFirst = function(string) {
-  let wordArr = [];
 
     for(let i=0; i<string.length; i++) {
       if(i === 0 || string[i-1] === " ") {
-        wordArr.push(string[i].toUpperCase());
-      } else {
-        wordArr.push(string[i]);
+        string[i].toUpperCase();
       }
     }
 
-  let word = wordArr.join("");
-
-  return word;
-  //return result.join("");
+  return string;
 }
-
-console.log("EXERCISE 9:");
-console.log(upperFirst("upperFirst function was created"));
+upperFirst("this is to test the speed between two functions.");
 
 
 
@@ -215,3 +207,4 @@ let giveMeRandom = function(n) {
 /* WHEN YOU ARE FINISHED
 Commit and push the code to your personal GitHub repository and share the link to your commit in Eduflow.
 */
+
