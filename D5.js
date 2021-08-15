@@ -163,7 +163,7 @@ Write a function "upperFirst" to capitalize the first letter of each word of a g
 let upperFirst = function(string) {
 
     for(let i=0; i<string.length; i++) {
-      if(i === 0 || string[i-1] === " ") {
+      if(i === 0 || string[i-1] === " " || string[i-1] === ",") {
         string[i].toUpperCase();
       }
     }
