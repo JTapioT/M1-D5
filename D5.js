@@ -126,8 +126,8 @@ let check3and7 = function(number) {
     return false;
   }
 }
-// console.log("EXERCISE 6: ");
-// console.log(check3and7(18));
+console.log(check3and7(18));
+console.log("EXERCISE 6: ");
 
 
 
@@ -136,18 +136,20 @@ Write a function "reverseString" to programmatically reverse a given string (es.
 */
 
 let reverseString = function(string) {
-  let reversedString = [];
-  for(let i = string.length -1; i >= 0; i--) {
-    reversedString.push(string[i]);
+
+  let reversedString = "";
+  for (let i= string.length; i > 0; i--) {
+    reversedString += string[i];
   }
-  let result = reversedString.join("");
-  return result;
-  
-  // Other solution:
-  // let reversedString = "";
-  // for (let i= string.length; i > 0; i--) {
-  // reversedString += string[i];
+  return reversedString;
+
+  // One solution:
+  // let reversedString = [];
+  // for(let i = string.length -1; i >= 0; i--) {
+  //  reversedString.push(string[i]);
   // }
+  // let result = reversedString.join("");
+  // return result;
   }
 
 // return reversedString.join("");
@@ -161,16 +163,18 @@ Write a function "upperFirst" to capitalize the first letter of each word of a g
 */
 
 let upperFirst = function(string) {
-
+  let result = "";
     for(let i=0; i<string.length; i++) {
-      if(i === 0 || string[i-1] === " " || string[i-1] === ",") {
-        string[i].toUpperCase();
+      if(i === 0 || (string[i-1] === " " || string[i-1] === ",")) {
+        result += string[i].toUpperCase();
+      } else {
+        result += string[i];
       }
     }
 
-  return string;
+  return result;
 }
-upperFirst("this is to test the speed between two functions.");
+// upperFirst("therefore, this is just random text.");
 
 
 
